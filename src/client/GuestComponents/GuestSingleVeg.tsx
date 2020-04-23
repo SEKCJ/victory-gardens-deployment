@@ -60,192 +60,182 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                 <div className="d-flex">
                     <Card className="mx-auto my-4 bg-white shadow-lg p-3 mb-5 border- mb-3 text-success" style={{ width: '50rem' }}>
                         <div className="shadow-lg rounded-pill text-white text-center bg-success">
-
-                        <Card.Body>
-                            <Card.Link href='/veggies'>Back to List</Card.Link>
-                        </Card.Body>
-                        <Card.Title className="mx-auto">
-                                <br></br>
-                                <h1>{vgObj.vgName}</h1>
-                                <p>{vgObj.vgSciName}</p>
+                            <Card.Body>
+                                <Card.Link href='/veggies'>Back to List</Card.Link>
+                            </Card.Body>
+                            <Card.Title className="mx-auto">
+                                    <br></br>
+                                    <h1>{vgObj.vgName}</h1>
+                                    <p>{vgObj.vgSciName}</p>
                             </Card.Title>
-                            </div>
+                        </div>
                         <Card.Img className="mx-auto" variant="top" style={{ "width": '15em' }} src={vgObj.vgImg} />
-
 
                         <Card.Body className="mx-auto">
                             <Button variant="light" type="submit" disabled>Add to My Garden!</Button>
                             <Form.Text className="text-muted">Must be signed in to add a veggie.</Form.Text>
-
-
                         </Card.Body>
+
                         <Container>
-                        <br></br>
-                        <Row>
-                            <Col>
                             <br></br>
-                            <Accordion >
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                        <Accordion.Toggle as={Button} variant="link"
-                                                className="mx-auto text-white" eventKey="0">
-                                                Soil
-                                                </Accordion.Toggle>
-                                        </Card.Header>
-                                        <Accordion.Collapse eventKey="0">
-                                            <Card.Body>
-                                                <ListGroup className="list-group-flush">
-                                                    {vgObj.vgSoil}
-                                                </ListGroup>
-                                            </Card.Body>
-                                            </Accordion.Collapse>
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                        Position
-                                        </Card.Header>
-                                       
-                                 
-                                      
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                         
-                                                Frost Tolerance
-                                      
-                                        </Card.Header>
-                                        
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                           
-                                                Feeding
-                                       
-                                        </Card.Header>
-                                        
-                                     
-                                    </Card>
-                            
+                            <Row className="justify-content-center">
+                                <Col md="4" xs="12">
                                 <br></br>
-                                </Accordion>
-                            </Col>
-
-                            <Col>
-                            <Accordion>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                        <Accordion.Toggle as={Button} variant="link"
-                                                className="mx-auto text-white" eventKey="2">
-                                                Companions
+                                <Accordion >
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                                <Accordion.Toggle as={Button} variant="link"
+                                                    className="mx-auto text-white" eventKey="0">
+                                                    Soil
                                                 </Accordion.Toggle>
-                                        </Card.Header>
-                                        <Accordion.Collapse eventKey="2">
-        <Card.Body>{vgObj.vgCompanions}</Card.Body>
-        </Accordion.Collapse>
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                           
-                                                Bad Companions
-                                     
-                                        </Card.Header>
-                                      
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                            
-                                                Spacing
+                                            </Card.Header>
+                                            <Accordion.Collapse eventKey="0">
+                                                <Card.Body>
+                                                    <ListGroup className="list-group-flush">
+                                                        {vgObj.vgSoil}
+                                                    </ListGroup>
+                                                </Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                            Position
+                                            </Card.Header>
+                                        </Card>
                                         
-                                        </Card.Header>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                            
+                                                    Frost Tolerance
                                         
+                                            </Card.Header>
                                             
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
+                                        </Card>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
                                             
-                                                Sow and Plant
+                                                    Feeding
                                         
-                                        </Card.Header>
-                                        
-                                            
-                                    </Card>
+                                            </Card.Header>
+                                        </Card>
+                                
                                     <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                            
-                                                Planting Months
-                                      
-                                        </Card.Header>
-                               
-                                         
-                                      
-                                    </Card>
-                                    <br></br>
-                      </Accordion>
-                            </Col>
+                                    </Accordion>
+                                </Col>
 
-                            <Col>
-                            <Accordion>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                        <Accordion.Toggle as={Button} variant="link"
-                                                className="mx-auto text-white" eventKey="3">
-                                                Harvesting Months
-                                                </Accordion.Toggle>
-                                        </Card.Header>
-                                        <Accordion.Collapse eventKey="3">
-                                        <Card.Body>{vgObj.vgHM}</Card.Body>
-                                        </Accordion.Collapse>
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
+                                <Col md="4" xs="12">
+                                    <Accordion>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                            <Accordion.Toggle as={Button} variant="link"
+                                                    className="mx-auto text-white" eventKey="2">
+                                                    Companions
+                                                    </Accordion.Toggle>
+                                            </Card.Header>
+                                            <Accordion.Collapse eventKey="2">
+                                                <Card.Body>{vgObj.vgCompanions}</Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
                                             
-                                                Notes
-                                      
-                                        </Card.Header>
-                                     
-                                  
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                            
-                                                Harvesting
-                                   
-                                        </Card.Header>
+                                                    Bad Companions
                                         
+                                            </Card.Header>
+                                        
+                                        </Card>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                                
+                                                    Spacing
                                             
+                                            </Card.Header>
+                                            
+                                                
+                                        </Card>
+
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                                
+                                                    Sow and Plant
+                                            
+                                            </Card.Header>
+                                        </Card>
+                                        <br></br>
+
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                                
+                                                    Planting Months
+                                        
+                                            </Card.Header>
+                                        </Card>
+            
+                                        <br></br>
+                                    </Accordion>
+                                </Col>
+
+                                <Col md="4" xs="12">
+                                    <Accordion>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                            <Accordion.Toggle as={Button} variant="link"
+                                                    className="mx-auto text-white" eventKey="3">
+                                                    Harvesting Months
+                                                    </Accordion.Toggle>
+                                            </Card.Header>
+                                            <Accordion.Collapse eventKey="3">
+                                            <Card.Body>{vgObj.vgHM}</Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                                
+                                                    Notes
+                                        
+                                            </Card.Header>
+                                        
                                     
-                                    </Card>
-                                    <br></br>
-                                    <Card className="rounded-lg">
-                                        <Card.Header className="bg-success text-white d-flex">
-                                          
-                                                Troubleshooting
-                                     
-                                        </Card.Header>
-                                   
-                                           
-                                  
-                                    </Card>
-                                    <br></br>
-                    </Accordion>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Button className="text-success" as={Link} to="/veggies" variant="link">
-                                Go Back To List
-                            </Button>
-                        </Row> </Container>
+                                        </Card>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                                
+                                                    Harvesting
+                                    
+                                            </Card.Header>
+                                            
+                                                
+                                        
+                                        </Card>
+                                        <br></br>
+                                        <Card className="rounded-lg">
+                                            <Card.Header className="bg-success text-white d-flex">
+                                            
+                                                    Troubleshooting
+                                        
+                                            </Card.Header>
+                                        </Card>
+                                        
+                                        <br></br>
+                                    </Accordion>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Button className="text-success" as={Link} to="/veggies" variant="link">
+                                    Go Back To List
+                                </Button>
+                            </Row> 
+                        </Container>
                     </Card>
                 </div>
             </Container>

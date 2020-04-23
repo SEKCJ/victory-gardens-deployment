@@ -23,7 +23,7 @@ const GuestHome: React.FC<ILoginProps> = props => {
   if (loading === true) {
     return (
       <Container className="d-flex">
-        <Spinner className="mx-auto my-3" animation="border" variant="warning" style={{ "width": "30em", "height": "30em" }} />
+        <Spinner className="mx-auto my-3" animation="border" variant="warning" style={{ "paddingLeft": "30%", "paddingTop": "30%" }} />
       </Container>
     )
   } else {

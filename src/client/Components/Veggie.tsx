@@ -151,8 +151,8 @@ const Veggie: React.FC<IVeggieProps> = (props: any) => {
                             {btnType}
                         </Card.Body>
                         <br></br>
-                        <Row>
-                            <Col>
+                        <Row className="justify-content-center">
+                            <Col md="4" xs="12">
                             <br></br>
                                 <Accordion >
                                     <Card className="rounded-lg">
@@ -212,7 +212,7 @@ const Veggie: React.FC<IVeggieProps> = (props: any) => {
                                 <br></br>
                             </Col>
 
-                            <Col>
+                            <Col md="4" xs="12">
                                 <Accordion>
                                     <br></br>
                                     <Card className="rounded-lg">
@@ -281,7 +281,7 @@ const Veggie: React.FC<IVeggieProps> = (props: any) => {
                                 </Accordion>
                             </Col>
 
-                            <Col>
+                            <Col md="4" xs="12">
                                 <Accordion>
                                     <br></br>
                                     <Card className="rounded-lg">

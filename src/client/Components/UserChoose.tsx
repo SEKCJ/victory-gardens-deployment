@@ -347,7 +347,7 @@ const HelpChoose: React.FC<IAppProps> = props => {
                             </Card>
                         </Accordion>
                     </Row>
-                    <Row className="d-flex">
+                    <Row className="mx-auto d-flex col-sm-12">
                         <Accordion className="mx-auto col-sm-8">
                             <Card >
                                 <Card.Header className="d-flex bg-success text-white" style={{ "height": "4.5em" }}>

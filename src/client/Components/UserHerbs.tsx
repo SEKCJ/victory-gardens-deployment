@@ -124,7 +124,7 @@ const Herbs: React.FC<IAppProps> = props => {
 
             if (savedHerbs[herbsId]) {
                 btnType = (
-                    <Button className="px-3 py-1 bg-white border-white" 
+                    <Button className="px-3 py-1 bg-white border-white"
                         style={{ "borderRadius": "50%" }}>
                         <small className="text-success" style={{ "fontSize": "1.8em" }}>&#10003;</small>
                     </Button>
@@ -137,27 +137,34 @@ const Herbs: React.FC<IAppProps> = props => {
                     </Button>
                 )
             }
-            
+
             return (
-                <Container key={herbsId} className=" p-3 mb-5 rounded border-0 ">
+                <Container className=" p-3 mb-0 rounded border-0 " key={herbsId}>
                     <Row className="d-flex ">
-                        <Card className="mx-auto col-sm-8 px-0 p-3 mb-0 bg-success shadow p-3 mb-1">
-                            <div className="d-flex flex-row p-1 mb-2 bg-success rounded">
-                                <Card.Img className="rounded border border-light " variant="top" style={{ "width": "10em" }}
-                                    src={herbsImg} />
-                                <Card.ImgOverlay className="px-2 py-2" style={{ "width": "4em" }}>
-                                    {btnType}
-                                </Card.ImgOverlay>
+                        <Card className="mx-auto col-sm-8 py-4 bg-success shadow mb-2">
+                            <Row className="px-3">
+                                <Col lg="3" xs="12" className="pr-0 py-2">
+                                    <Card.Img className="rounded border border-light " variant="top"
+                                        src={herbsImg} />
 
-                                <Card.Body className="p-3 mb-2 bg-success text-white ">
-                                    <Card.Title>{herbsName}</Card.Title>
-                                    <Card.Text className="text-white">
-                                        {herbsSciName}
-                                    </Card.Text>
-                                </Card.Body>
+                                    <Card.ImgOverlay className="px-0 py-0">
+                                        {btnType}
+                                    </Card.ImgOverlay>
 
-                                <Button className="shadow p-3 mb-5 border-white text-center" variant="primary" as={Link} to={`/userherbs/${herbsId}`}>Read More</Button>
-                            </div>
+                                </Col>
+                                <Col lg="5" xs="8" className="pl-1 py-2">
+                                    <Card.Body className="p-3 mb-2 bg-success text-light">
+                                        <Card.Title>{herbsName}</Card.Title>
+                                        <Card.Text className="text-white">
+                                            {herbsSciName}
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Col>
+                                <Col lg="3" xs="4" className="ml-auto py-2 d-flex">
+                                    <Button className="shadow p-3 mb-5 ml-auto text-center text-white border-white bg-success"
+                                        as={Link} to={`/userherbs/${herbsId}`}>Read More</Button>
+                                </Col>
+                            </Row>
                         </Card>
                     </Row>
                 </Container>

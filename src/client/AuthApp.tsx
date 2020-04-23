@@ -50,7 +50,7 @@ const Auth: React.FC<IAppProps> = props => {
     } else {
         return (
             <Container className="d-flex" style={{ "width": "100vw", "height": "100vh" }}>
-                <Spinner className="mx-auto my-auto" animation="border" variant="warning" style={{ "width": "30em", "height": "30em" }} />
+                <Spinner className="mx-auto my-auto" animation="border" variant="warning" style={{ "paddingLeft": "30%", "paddingTop": "30%" }} />
             </Container>
         )
     }

@@ -6,6 +6,7 @@ import {
 import { Link } from 'react-router-dom';
 import { IAppProps } from '../App';
 import { api, Token } from '../Services/apiServices';
+import { FaTrashAlt } from 'react-icons/fa'
 
 const SavedVeggies: React.FC<IAppProps> = props => {
 
@@ -78,33 +79,37 @@ const SavedVeggies: React.FC<IAppProps> = props => {
                 let veggieSciName = element.sci_name
 
                 return (
-                    <Container className=" p-3 mb-5 rounded border-0 " key={veggieName}>
+                    <Container className=" p-3 mb-0 rounded border-0 " key={`veggie ${veggieId}`}>
                         <Row className="d-flex ">
-                            <Card className="mx-auto col-sm-8 px-0 p-3 mb-2 bg-success shadow p-3 mb-5 ">
-                                <div className="d-flex flex-row p-3 mb-2 bg-success rounded">
-                                    <Card.Img className="rounded border border-light " variant="top" style={{ "width": "10em" }}
-                                        src={veggieImg} />
+                            <Card className="mx-auto col-sm-8 py-4 bg-success shadow mb-2">
+                                <Row className="px-3">
+                                    <Col lg="3" xs="12" className="pr-0 py-2">
+                                        <Card.Img className="rounded border border-light " variant="top"
+                                            src={veggieImg} />
 
-                                    <Card.ImgOverlay className="px-2 py-2" style={{ "width": "4em" }}>
-                                        <Button className="px-0 py-0 text-center" style={{ "borderRadius": "25%" }}
-                                            onClick={(e: React.MouseEvent<HTMLButtonElement>) => { handleClickVeggie(e, veggieId, veggieName) }}>
-                                            <small className="text-dark" style={{ "fontSize": "1.8em" }}>&#128465;</small>
-                                        </Button>
-                                    </Card.ImgOverlay>
-
-                                    <Card.Body className="p-3 mb-2 bg-success text-light">
-                                        <Card.Title>{veggieName}</Card.Title>
-                                        <Card.Text className="text-white">
-                                            {veggieSciName}
-                                        </Card.Text>
-                                    </Card.Body>
-
-                                    <Button className="shadow p-3 mb-5 text-center text-white border-white" variant="success" as={Link} to={`/veggies/${veggieId}`}>Read More</Button>
-                                </div>
+                                        <Card.ImgOverlay className="px-0 py-0">
+                                            <Button className="px-1 py-1 text-center" variant="danger"
+                                                onClick={(e: React.MouseEvent<HTMLButtonElement>) => { handleClickVeggie(e, veggieId, veggieName) }}>
+                                                <FaTrashAlt size="1.5em"/>
+                                            </Button>
+                                        </Card.ImgOverlay>
+                                    </Col>
+                                    <Col lg="5" xs="8" className="pl-1 py-2">
+                                        <Card.Body className="p-3 mb-2 bg-success text-light">
+                                            <Card.Title>{veggieName}</Card.Title>
+                                            <Card.Text className="text-white">
+                                                {veggieSciName}
+                                            </Card.Text>
+                                        </Card.Body>
+                                    </Col>
+                                    <Col lg="3" xs="4" className="ml-auto py-2 d-flex">
+                                        <Button className="shadow p-3 mb-5 ml-auto text-center text-white border-white bg-success"
+                                            as={Link} to={`/veggies/${veggieId}`}>Read More</Button>
+                                    </Col>
+                                </Row>
                             </Card>
                         </Row>
                     </Container>
-
                 )
             })
 
@@ -115,40 +120,45 @@ const SavedVeggies: React.FC<IAppProps> = props => {
                 let herbSciName = element.sci_name
 
                 return (
-                    <Container className=" p-3 mb-5 rounded border-0 " key={herbName}>
+                    <Container className=" p-3 mb-0 rounded border-0 " key={`herb #${herbId}`}>
                         <Row className="d-flex ">
-                            <Card className="mx-auto col-sm-8 px-0 p-3 mb-2 bg-success shadow p-3 mb-5 ">
-                                <div className="d-flex flex-row p-3 mb-2 bg-success rounded">
-                                    <Card.Img className="rounded border border-light " variant="top" style={{ "width": "10em" }}
-                                        src={herbImg} />
+                            <Card className="mx-auto col-sm-8 py-4 bg-success shadow mb-2">
+                                <Row className="px-3">
+                                    <Col lg="3" xs="12" className="pr-0 py-2">
+                                        <Card.Img className="rounded border border-light " variant="top"
+                                            src={herbImg} />
 
-                                    <Card.ImgOverlay className="px-2 py-2" style={{ "width": "4em" }}>
-                                        <Button className="px-0 py-0  text-center" style={{ "borderRadius": "25%" }}
-                                            onClick={(e: React.MouseEvent<HTMLButtonElement>) => { handleClickHerb(e, herbId, herbName) }}>
-                                            <small className="text-dark" style={{ "fontSize": "1.8em" }}>&#128465;</small>
-                                        </Button>
-                                    </Card.ImgOverlay>
+                                        <Card.ImgOverlay className="px-0 py-0">
+                                            <Button className="px-1 py-1  text-center" variant="danger"
+                                                onClick={(e: React.MouseEvent<HTMLButtonElement>) => { handleClickHerb(e, herbId, herbName) }}>
+                                                <FaTrashAlt size="1.5em" />
+                                            </Button>
+                                        </Card.ImgOverlay>
 
-                                    <Card.Body className="p-3 mb-2 bg-success text-light">
-                                        <Card.Title>{herbName}</Card.Title>
-                                        <Card.Text className="text-white">
-                                            {herbSciName}
-                                        </Card.Text>
-                                    </Card.Body>
-
-                                    <Button className="shadow p-3 mb-5 text-center text-white border-white" variant="success" as={Link} to={`/herbs/${herbId}`}>Read More</Button>
-                                </div>
+                                    </Col>
+                                    <Col lg="5" xs="8" className="pl-1 py-2">
+                                        <Card.Body className="p-3 mb-2 bg-success text-light">
+                                            <Card.Title>{herbName}</Card.Title>
+                                            <Card.Text className="text-white">
+                                                {herbSciName}
+                                            </Card.Text>
+                                        </Card.Body>
+                                    </Col>
+                                    <Col lg="3" xs="4" className="ml-auto py-2 d-flex">
+                                        <Button className="shadow p-3 mb-5 ml-auto text-center text-white border-white bg-success"
+                                            as={Link} to={`/userherbs/${herbId}`}>Read More</Button>
+                                    </Col>
+                                </Row>
                             </Card>
                         </Row>
                     </Container>
-
                 )
             })
             let plantCards = [...vegCards, ...herbCards]
             setApiArray(plantCards)
         }
     }
-    // useEffect [] same as componentDidMount() 
+    // useEffect [] same as componentDidMount()
     useEffect(() => {
         fetchAPI()
     }, [deleted])

@@ -138,9 +138,6 @@ const Herb: React.FC<IVeggieProps> = (props: any) => {
                 <div className="d-flex">
                 <Card className="mx-auto my-4 bg-white shadow-lg p-3 mb-5  mb-3 text-success" style={{ width: '50rem' }}>
                         <div className="shadow-lg rounded-pill text-white text-center bg-success">
-                        {/* <Card.Body className="mx-auto my-4 bg-white shadow-lg p-3 mb-5  mb-3 text-success">
-                            <Card.Link as={Link} to="/userherbs" className="mx-auto btn btn-secondary col-sm-8"><h5 className="my-auto">Back to List</h5></Card.Link>
-                        </Card.Body> */}
                         
                         <Card.Title className="mx-auto">
                             <h1>{vgObj.vgName}</h1>
@@ -154,8 +151,8 @@ const Herb: React.FC<IVeggieProps> = (props: any) => {
                             {btnType}
                         </Card.Body>
 <br></br>
-                        <Row>
-                            <Col>
+                        <Row className="justify-content-center">
+                            <Col md="4" xs="12">
 
                                 <Accordion>
                                     <Card className="rounded-lg">
@@ -217,7 +214,7 @@ const Herb: React.FC<IVeggieProps> = (props: any) => {
                                 </Accordion>
                             </Col>
 
-                            <Col>
+                            <Col md="4" xs="12">
                                 <Accordion>
 
                                     <Card className="rounded-lg">
@@ -287,7 +284,7 @@ const Herb: React.FC<IVeggieProps> = (props: any) => {
                                 <br></br>
                             </Col>
 
-                            <Col>
+                            <Col md="4" xs="12">
                                 <Accordion>
 
 

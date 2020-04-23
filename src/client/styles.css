@@ -1,0 +1,88 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgba(192, 245, 171, 0.973);
+}
+
+.jumbotron {
+    background-color: rgba(130, 194, 57, 0.884);
+    text-align: center;
+}
+
+#board {
+    display: block;
+    /* display: flex; */
+    margin: 50px 0;
+    border: 12px solid #4c311c;
+    border-radius: 10px;
+    background-color: #2e1206;
+}
+
+.dirtRow {
+    display: flex;
+}
+
+.plot {
+    border: 0.5px solid #2e1206;
+    width: 10%;
+    padding: 0;
+    cursor: pointer;
+    /* flex for stretching horizontal plant images to be square */
+    display: flex;
+}
+
+.profileTabs>a {
+    color: white;
+}
+
+.profileTabs :hover {
+    transition-delay: 100ms;
+    color: white;
+}
+
+.avatars:hover {
+    border-radius: 50%;
+    border: 5px solid #28a745;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.avatarselect {
+    background-size: cover;
+    border-radius: 50%;
+    width: 100%;
+    padding-top: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-position: center;
+    border: 5px solid #28a745;
+    background-color: #FAF8D9;
+}
+
+.avatars {
+    background-size: cover;
+    border-radius: 50%;
+    width: 100%;
+    padding-top: 100%;
+    background-position: center;
+    background-color: #FAF8D9;
+}
+
+.mainAvatar {
+    background-size: cover;
+    border-radius: 50%;
+    width: 100%;
+    padding-top: 100%;
+    background-position: center;
+    border: 1px solid #191A1C;
+    background-color: #FAF8D9;
+}
+
+.responseAvatar {
+    background-size: cover;
+    border-radius: 50%;
+    height: 100%;
+    padding-left: 100%;
+    background-position: center;
+    border: 1px solid #191A1C;
+    background-color: #FAF8D9;
+}

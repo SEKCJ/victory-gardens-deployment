@@ -16,41 +16,25 @@ const Navigate: React.FC<INavbar> = (props) => {
 
 
     return (
-        <Navbar variant="dark" bg="dark" expand="sm" className="sticky-top">
+        <Navbar variant="dark" bg="dark" expand="md" sticky="top" collapseOnSelect>
             <Navbar.Brand href="/"> <Image src={window.location.origin + "/assets/VGLogo.png"}
                 style={{ "width": "3em" }} rounded /></Navbar.Brand>
-            <Navbar.Toggle aria-controls="navigate" />
-            {/* <Navbar.Collapse id="navigate"> */}
-            {/* <Nav className="mr-auto">
-                
-                <Nav.Link as={Link} to="/veggies">Browse All Veggies</Nav.Link>
-                <Nav.Link as={Link} to="/herbs">Browse All Herbs</Nav.Link> */}
-
-
-            {/* <Nav.Link as={Link} to="/">Calendar</Nav.Link> */}
-            {/* </Nav> */}
-
-            <Navbar.Collapse className="d-flex" id="navigate">
+            <Navbar.Toggle aria-controls="user-navbar" />
+            <Navbar.Collapse id="user-navbar">
                 <Nav className="mr-auto">
                     <Nav.Link as={Link} to="/choose">Help Me Choose</Nav.Link>
-                    <NavDropdown className="mr-auto" title="Browse All" id="browse-dropdown">
+                    <NavDropdown title="Browse All" id="browse-dropdown">
                         <NavDropdown.Item as={Link} to='/veggies'>Veggies</NavDropdown.Item>
                         <NavDropdown.Item as={Link} to='/userherbs'>Herbs</NavDropdown.Item>
-
                     </NavDropdown>
                     <Nav.Link as={Link} to="/savedveggies">My Garden</Nav.Link>
                     <Nav.Link as={Link} to="/communitygarden">Community Garden</Nav.Link>
                 </Nav>
-
-
-
-
-                <Nav>
+                <Nav >
                     <NavDropdown alignRight title="My Profile" id="profile-dropdown">
-                        <NavDropdown.Item as={Link} to="/myprofile">My Profile</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="/myprofile" className="text-muted">My Profile</NavDropdown.Item>
                         <NavDropdown.Item className="text-danger" onClick={(e: React.MouseEvent) => handleClick(e)}>Log Out</NavDropdown.Item>
                     </NavDropdown>
-
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

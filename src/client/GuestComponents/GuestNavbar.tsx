@@ -77,40 +77,27 @@ const GuestNavigate: React.FC<any> = props => {
   }, [btnState, email, password])
 
   return (
-    <Navbar variant="dark" bg="dark" expand="lg" className="sticky-top">
-      <Navbar.Brand  href="/"> <img className="rounded" src={window.location.origin + "/assets/VGLogo.png"}
+    <Navbar variant="dark" bg="dark" expand="lg" className="sticky-top" collapseOnSelect>
+      <Navbar.Brand href="/"> <img className="rounded" src={window.location.origin + "/assets/VGLogo.png"}
         style={{ "width": "3em" }} /></Navbar.Brand>
-      <Navbar.Toggle aria-controls="navigate" />
-      <Navbar.Collapse id="navigate">
+      <Navbar.Toggle aria-controls="guest-navbar" />
+      <Navbar.Collapse id="guest-navbar">
         <Nav className="mr-auto">
+          <Nav.Link as={Link} to="/guestchoose">Help Me Choose</Nav.Link>
+          <NavDropdown className="mr-auto" title="Browse All" id="browse-dropdown">
+            <NavDropdown.Item as={Link} to='/guestveggies'>Veggies</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to='/guestherbs'>Herbs</NavDropdown.Item>
 
-          <Navbar.Collapse id="navigate">  <Nav>
-            <Nav.Link as={Link} to="/guestchoose">Help Me Choose</Nav.Link>
-            <NavDropdown className="mr-auto" title="Browse All" id="browse-dropdown">
-              <NavDropdown.Item as={Link} to='/guestveggies'>Veggies</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to='/guestherbs'>Herbs</NavDropdown.Item>
-
-            </NavDropdown>
-            {/* <Nav.Link as={Link} to="/">Calendar</Nav.Link> */}
-            {/* <Nav.Link as={Link} to="/guestabout">About Victory Gardens</Nav.Link> */}
-          </Nav>
-          </Navbar.Collapse>
-
-
+          </NavDropdown>
         </Nav>
-        <Nav className="mr-5">
-
+        <Nav>
           <DropdownButton alignRight title="Login" variant="success" id="login-button">
             {loading}
             {invalid}
           </DropdownButton>
-
           <Nav.Link as={Link} to="/guestsignup">Signup</Nav.Link>
-
-
         </Nav>
       </Navbar.Collapse>
-
     </Navbar >
   )
 }

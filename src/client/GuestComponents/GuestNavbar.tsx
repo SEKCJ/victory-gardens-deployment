@@ -77,7 +77,7 @@ const GuestNavigate: React.FC<any> = props => {
   }, [btnState, email, password])
 
   return (
-    <Navbar variant="dark" bg="dark" expand="lg" className="sticky-top" collapseOnSelect>
+    <Navbar variant="dark" bg="dark" expand="lg" sticky="top" collapseOnSelect>
       <Navbar.Brand href="/"> <img className="rounded" src={window.location.origin + "/assets/VGLogo.png"}
         style={{ "width": "3em" }} /></Navbar.Brand>
       <Navbar.Toggle aria-controls="guest-navbar" />

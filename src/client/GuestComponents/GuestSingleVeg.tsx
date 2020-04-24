@@ -27,7 +27,7 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                 vgId: resObj.id,
                 vgName: resObj.name,
                 vgSciName: resObj.sci_name,
-                vgImg: resObj.url, 
+                vgImg: resObj.url,
                 vgSoil: resObj.soil,
                 vgCompanions: resObj.companions,
                 vgHM: resObj.harvest_months,
@@ -64,11 +64,12 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                                 <Card.Link href='/veggies'>Back to List</Card.Link>
                             </Card.Body>
                             <Card.Title className="mx-auto">
-                                    <br></br>
-                                    <h1>{vgObj.vgName}</h1>
-                                    <p>{vgObj.vgSciName}</p>
+                                <br></br>
+                                <h1>{vgObj.vgName}</h1>
+                                <p>{vgObj.vgSciName}</p>
                             </Card.Title>
                         </div>
+
                         <Card.Img className="mx-auto" variant="top" style={{ "width": '15em' }} src={vgObj.vgImg} />
 
                         <Card.Body className="mx-auto">
@@ -80,8 +81,8 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                             <br></br>
                             <Row className="justify-content-center">
                                 <Col md="4" xs="12">
-                                <br></br>
-                                <Accordion >
+                                    <br></br>
+                                    <Accordion >
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
                                                 <Accordion.Toggle as={Button} variant="link"
@@ -100,29 +101,31 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                            Position
+                                                <Card.Title as="p" className="my-0 mx-auto">
+                                                    Position
+                                                </Card.Title>
                                             </Card.Header>
                                         </Card>
-                                        
+
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                            
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Frost Tolerance
-                                        
+                                                </Card.Title>
                                             </Card.Header>
-                                            
+
                                         </Card>
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                            
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Feeding
-                                        
+                                                </Card.Title>
                                             </Card.Header>
                                         </Card>
-                                
-                                    <br></br>
+
+                                        <br></br>
                                     </Accordion>
                                 </Col>
 
@@ -131,7 +134,7 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                            <Accordion.Toggle as={Button} variant="link"
+                                                <Accordion.Toggle as={Button} variant="link"
                                                     className="mx-auto text-white" eventKey="2">
                                                     Companions
                                                     </Accordion.Toggle>
@@ -143,41 +146,41 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                            
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Bad Companions
-                                        
+                                                </Card.Title>
                                             </Card.Header>
-                                        
+
                                         </Card>
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                                
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Spacing
-                                            
+                                                </Card.Title>
                                             </Card.Header>
-                                            
-                                                
+
+
                                         </Card>
 
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                                
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Sow and Plant
-                                            
+                                                </Card.Title>
                                             </Card.Header>
                                         </Card>
                                         <br></br>
 
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                                
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Planting Months
-                                        
+                                                </Card.Title>
                                             </Card.Header>
                                         </Card>
-            
+
                                         <br></br>
                                     </Accordion>
                                 </Col>
@@ -187,45 +190,44 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                            <Accordion.Toggle as={Button} variant="link"
+                                                <Accordion.Toggle as={Button} variant="link"
                                                     className="mx-auto text-white" eventKey="3">
                                                     Harvesting Months
                                                     </Accordion.Toggle>
                                             </Card.Header>
                                             <Accordion.Collapse eventKey="3">
-                                            <Card.Body>{vgObj.vgHM}</Card.Body>
+                                                <Card.Body>{vgObj.vgHM}</Card.Body>
                                             </Accordion.Collapse>
                                         </Card>
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                                
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Notes
-                                        
+                                                </Card.Title>
                                             </Card.Header>
-                                        
-                                    
                                         </Card>
+
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                                
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Harvesting
-                                    
+                                                </Card.Title>
                                             </Card.Header>
-                                            
-                                                
-                                        
+
+
+
                                         </Card>
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
-                                            
+                                                <Card.Title as="p" className="my-0 mx-auto">
                                                     Troubleshooting
-                                        
+                                                </Card.Title>
                                             </Card.Header>
                                         </Card>
-                                        
+
                                         <br></br>
                                     </Accordion>
                                 </Col>
@@ -234,7 +236,7 @@ const GSingleVeg: React.FC<IVeggieProps> = (props) => {
                                 <Button className="text-success" as={Link} to="/veggies" variant="link">
                                     Go Back To List
                                 </Button>
-                            </Row> 
+                            </Row>
                         </Container>
                     </Card>
                 </div>

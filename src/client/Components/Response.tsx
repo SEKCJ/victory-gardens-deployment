@@ -71,17 +71,19 @@ const Response: React.FC<IResponse> = props => {
         setPost(
             <React.Fragment>
                 <Card.Header className="px-0">
-                    <Media className="col-sm-12 px-0">
+                    <Media className="col-sm-12 d-flex flex-row">
                         <Col sm="2" className="my-auto px-0 mr-3">
                             <div style={{ "backgroundImage": `url("${posts.url}")` }}
                                 className="mainAvatar"></div>
                         </Col>
-                        <Media.Body>
-                            <h5 className="text-light">{posts.username}</h5>
-                            <h4 className="text-light">{posts.title}</h4>
-                            <p className="text-light">{posts.content}</p>
-                            <h6 className="text-muted">{days}</h6>
-                        </Media.Body>
+                        <Col sm="10">
+                            <Media.Body>
+                                <h5 className="text-light">{posts.username}</h5>
+                                <h4 className="text-light">{posts.title}</h4>
+                                <p className="text-light">{posts.content}</p>
+                                <h6 className="text-muted">{days}</h6>
+                            </Media.Body>
+                        </Col>
                     </Media>
                 </Card.Header>
             </React.Fragment>
@@ -102,13 +104,17 @@ const Response: React.FC<IResponse> = props => {
                 return (
                     <ListGroup.Item key={`responses ${element.id}`} style={{ "borderRadius": "1em" }} className="mt-2">
                         <Media className="bg-light" >
-                            <Col sm="2" className="my-auto px-0 mr-3">
-                                <div style={{ "backgroundImage": `url("${element.url}")` }} className="mainAvatar"></div>
-                            </Col>
-                            <Media.Body>
-                                <h6 className="text-success d-flex mb-0">{element.username} <span className="ml-auto text-muted"><p>{days}</p></span></h6>
-                                <h6>{element.response}</h6>
-                            </Media.Body>
+                            <Row style={{ "width": "100%" }}>
+                                <Col sm="2" xs="6" className="my-auto px-0 mx-auto">
+                                    <div style={{ "backgroundImage": `url("${element.url}")` }} className="mainAvatar"></div>
+                                </Col>
+                                <Col sm="10" xs="12">
+                                    <Media.Body>
+                                        <h6 className="text-success d-flex mb-0">{element.username} <span className="ml-auto text-muted"><p>{days}</p></span></h6>
+                                        <h6>{element.response}</h6>
+                                    </Media.Body>
+                                </Col>
+                            </Row>
                         </Media >
                     </ListGroup.Item>
                 )
@@ -145,7 +151,7 @@ const Response: React.FC<IResponse> = props => {
                 setReply(false);
                 setSubmit(false)
             }
-        } 
+        }
     }
 
     if (pageState) {
@@ -167,6 +173,7 @@ const Response: React.FC<IResponse> = props => {
                                 <div style={{ "backgroundImage": `url("${apiResponse.url}")` }}
                                     className="mainAvatar"></div>
                             </Col>
+
                             <Media.Body>
                                 <h5 className="text-light">{apiResponse.username}</h5>
                                 <h4 className="text-light">{apiResponse.title}</h4>
@@ -179,17 +186,21 @@ const Response: React.FC<IResponse> = props => {
                             <Card.Body className="py-0">
                                 <Form>
                                     <Media className="px-0 py-0">
-                                        <Col sm="2" className="my-auto px-0 mr-3">
-                                            <div style={{ "backgroundImage": `url("${userAvatar}")` }}
-                                                className="mainAvatar"></div>
-                                        </Col>
-                                        <Media.Body>
-                                            <Form.Group controlId="response">
-                                                <Form.Label>What do you want to say!</Form.Label>
-                                                <Form.Control type="text-area" value={replyBody}
-                                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setReplyBody(e.target.value)} />
-                                            </Form.Group>
-                                        </Media.Body>
+                                        <Row style={{ "width": "100%" }} className="justify-content-center">
+                                            <Col sm="2" xs="6" className="my-auto">
+                                                <div style={{ "backgroundImage": `url("${userAvatar}")` }}
+                                                    className="mainAvatar"></div>
+                                            </Col>
+                                            <Col sm="10" xs="12">
+                                                <Media.Body>
+                                                    <Form.Group controlId="response">
+                                                        <Form.Label>What do you want to say!</Form.Label>
+                                                        <Form.Control type="text-area" value={replyBody}
+                                                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setReplyBody(e.target.value)} />
+                                                    </Form.Group>
+                                                </Media.Body>
+                                            </Col>
+                                        </Row>
                                     </Media>
                                 </Form>
                             </Card.Body>

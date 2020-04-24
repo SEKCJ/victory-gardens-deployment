@@ -167,8 +167,6 @@ const GSingleHerb: React.FC<IVeggieProps> = (props) => {
                                                     Sow and Plant
                                                 </Card.Title>
                                             </Card.Header>
-
-
                                         </Card>
                                         <br></br>
                                         <Card className="rounded-lg">
@@ -177,9 +175,6 @@ const GSingleHerb: React.FC<IVeggieProps> = (props) => {
                                                     Planting Months
                                                 </Card.Title>
                                             </Card.Header>
-
-
-
                                         </Card>
                                         <br></br>
                                     </Accordion>
@@ -204,21 +199,16 @@ const GSingleHerb: React.FC<IVeggieProps> = (props) => {
                                             <Card.Header className="bg-success text-white d-flex">
                                                 <Card.Title as="p" className="my-0 mx-auto">
                                                     Notes
-                                      </Card.Title>
+                                                </Card.Title>
                                             </Card.Header>
-
-
                                         </Card>
                                         <br></br>
                                         <Card className="rounded-lg">
                                             <Card.Header className="bg-success text-white d-flex">
                                                 <Card.Title as="p" className="my-0 mx-auto">
                                                     Harvesting
-                                            </Card.Title>
+                                                </Card.Title>
                                             </Card.Header>
-
-
-
                                         </Card>
                                         <br></br>
                                         <Card className="rounded-lg">
@@ -227,9 +217,6 @@ const GSingleHerb: React.FC<IVeggieProps> = (props) => {
                                                     Troubleshooting
                                                 </Card.Title>
                                             </Card.Header>
-
-
-
                                         </Card>
                                         <br></br>
                                     </Accordion>

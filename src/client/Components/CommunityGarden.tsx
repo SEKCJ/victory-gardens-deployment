@@ -43,21 +43,22 @@ const CommGard: React.FC<IResponse> = (props) => {
                 <Card className="col-sm-8 mx-auto my-4" bg="dark" key={element.id}>
                     <Card.Body className="px-0">
                         <Media className="col-sm-12 px-0">
-                            <Col sm="3" className="mt-3 px-0 mr-3">
+                            <Col sm="3" xs={3} className="mt-3 px-0 mr-3">
                                 <div style={{ "backgroundImage": `url("${element.url}")` }}
                                     className="mainAvatar"></div>
                             </Col>
-                            <Media.Body>
-                                <h5 className="text-light">{element.username}</h5>
-                                <h2 className="text-light">{element.title}</h2>
-                                <p className="text-light">{element.content}</p>
-                                <h6 className="text-muted">{days}</h6>
+                            <Col sm="9" xs={9}>
+                                <Media.Body>
+                                    <h5 className="text-light">{element.username}</h5>
+                                    <h2 className="text-light">{element.title}</h2>
+                                    <p className="text-light">{element.content}</p>
+                                    <h6 className="text-muted">{days}</h6>
 
-                                <Button variant="success" as={Link} to={`/communitygarden/post/${element.id}`}>
-                                    View Responses
-                                </Button>
-                            </Media.Body >
-
+                                    <Button variant="success" as={Link} to={`/communitygarden/post/${element.id}`}>
+                                        View Responses
+                                    </Button>
+                                </Media.Body >
+                            </Col>
                         </Media>
                     </Card.Body>
                 </Card>
